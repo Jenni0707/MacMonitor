@@ -1,0 +1,126 @@
+ls -al /User
+total 0
+drwxr-xr-x   8 root   admin  -  272 Aug 25 11:37 .
+drwxrwxr-t  35 root   admin  - 1258 Aug 29 23:00 ..
+-rw-r--r--   1 root   wheel  -    0 Jul  1  2009 .localized
+drwxrwxrwt   4 root   wheel  -  136 Dec  4  2011 Shared
+drwxrwxrwx   6 root   admin  -  204 Jul 25 10:35 WorkSpace
+drwxr-xr-x   5 root   admin  -  170 Aug 30 20:59 down
+drwxr-xr-x+ 26 macos  staff  -  884 May 16 16:42 mac
+drwxr-xr-x   3 root   admin  -  102 Aug 26 21:16 浙江
+
+
+
+测试1>>>> ls -al /Users/down/	21:3	2012年8月30日;
+
+ls -al /Users/down/
+total 0
+drwxr-xr-x   8 root   admin  -  272 Aug 25 11:37 .
+drwxrwxr-t  35 root   admin  - 1258 Aug 29 23:00 ..
+-rw-r--r--   1 root   wheel  -    0 Jul  1  2009 .localized
+drwxrwxrwt   4 root   wheel  -  136 Dec  4  2011 Shared
+drwxrwxrwx   6 root   admin  -  204 Jul 25 10:35 WorkSpace
+drwxr-xr-x   5 root   admin  -  170 Aug 30 20:59 down
+drwxr-xr-x+ 26 macos  staff  -  884 May 16 16:42 mac
+drwxr-xr-x   3 root   admin  -  102 Aug 26 21:16 浙江
+
+
+ls -al /Users/down/
+total 0
+drwxr-xr-x   8 root   admin  -  272 Aug 25 11:37 .
+drwxrwxr-t  35 root   admin  - 1258 Aug 29 23:00 ..
+-rw-r--r--   1 root   wheel  -    0 Jul  1  2009 .localized
+drwxrwxrwt   4 root   wheel  -  136 Dec  4  2011 Shared
+drwxrwxrwx   6 root   admin  -  204 Jul 25 10:35 WorkSpace
+drwxr-xr-x   5 root   admin  -  170 Aug 30 20:59 down
+drwxr-xr-x+ 26 macos  staff  -  884 May 16 16:42 mac
+drwxr-xr-x   3 root   admin  -  102 Aug 26 21:16 浙江
+
+
+ls -al /Users/down/
+total 16
+drwxr-xr-x  5 root  admin  170 Aug 30 20:59 .
+drwxr-xr-x  8 root  admin  272 Aug 25 11:37 ..
+drwxr-xr-x  3 root  admin  102 Dec  7  2011 MacOSDataCopyTools.app
+-rw-r--r--@ 1 root  admin   31 Jul 20  2011 tmpfile.txt
+-rw-r--r--@ 1 root  admin   31 Jul 20  2011 tx.txt
+
+
+ls -al /Users/down/
+total 16
+drwxr-xr-x  6 root  admin  204 Aug 30 21:38 .
+drwxr-xr-x  7 root  admin  238 Aug 30 21:38 ..
+drwxr-xr-x  3 root  admin  102 Dec  7  2011 MacOSDataCopyTools.app
+-rw-r--r--@ 1 root  admin   31 Jul 20  2011 tmpfile.txt
+-rw-r--r--@ 1 root  admin   31 Jul 20  2011 tx.txt
+drwxr-xr-x  4 root  admin  136 Aug 30 21:22 浙江
+
+
+
+测试1>>>> ls -al /	12:37	2012年9月6日;
+
+
+测试1>>>> ls	java.text.SimpleDateFormat@4f76f1a0;
+
+
+测试1>>>> ls	2012-09-08 16:16:24;
+
+ls
+.classpath
+.fatjar
+.project
+.settings
+.svn
+ScreenSaver
+bin
+config
+jar
+src
+
+
+
+测试1>>>> df -ah	2012-09-09 12:50:13;
+
+df -ah
+Filesystem      Size   Used  Avail Capacity  Mounted on
+/dev/disk0s3    37Gi   14Gi   23Gi    37%    /
+devfs          118Ki  118Ki    0Bi   100%    /dev
+map -hosts       0Bi    0Bi    0Bi   100%    /net
+map auto_home    0Bi    0Bi    0Bi   100%    /home
+/dev/disk0s2    37Gi   20Gi   18Gi    53%    /Volumes/OSX10.5
+/dev/disk0s4    37Gi   22Gi   16Gi    58%    /Volumes/mac3
+/dev/disk0s5    35Gi  1.1Gi   34Gi     4%    /Volumes/mac4
+/dev/disk0s6   1.0Gi  108Mi  916Mi    11%    /Volumes/mac4_2
+/dev/disk1s9   146Mi  135Mi   11Mi    93%    /Volumes/eclipse
+/dev/disk2s1   1.9Gi   51Mi  1.8Gi     3%    /Volumes/KINGSTON
+
+
+
+测试1>>>> ls /Volumes/mac4	2012-09-09 12:51:39;
+
+ls /Volumes/mac4
+.DS_Store
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.com.apple.timemachine.supported
+.fseventsd
+Aobo-log
+Chmox-0.3.dmg
+FullProject-v2.9.9
+MacOSDataCopyTools.app
+MacOSGetInfoTools.app
+MacOSGetInfoTools.jar
+OC-Test
+QQDownLoad
+cs2
+eclipse-Helios-cn.dmg
+eclipse-cpp.dmg
+exploit
+new
+startup
+startup.zip
+项目1
+项目2
+
+

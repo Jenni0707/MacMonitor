@@ -1,0 +1,13 @@
+#Mon Jun 11 18:42:16 CST 2012
+eclipse.preferences.version=1
+encoding//src/com/QQPanel=UTF-8
+encoding//src/com/QQPanel/CommandWindow.java=UTF-8
+encoding//src/com/topking/ftp/bean/DownLoadBean.java=GBK
+encoding//src/com/topking/ftp/bean/FileBean.java=GBK
+encoding//src/com/topking/ftp/bean/UpLoadBean.java=GBK
+encoding//src/com/topking/ftp/ui/LocalPath.java=UTF-8
+encoding//src/com/topking/ftp/ui/MainFrame.java=UTF-8
+encoding//src/com/topking/ftp/ui/PropertyWindow.java=GBK
+encoding//src/com/topking/ftp/ui/ReNameFrame.java=GBK
+encoding//src/com/topking/ftp/util/FileupdataUtil.java=UTF-8
+encoding//src/com/topking/ftp/util/PathUtil.java=GBK

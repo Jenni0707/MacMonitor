@@ -1,0 +1,79 @@
+total 0
+drwxr-xr-x   7 root   admin  -  238 May 24 10:15 .
+drwxrwxr-t  34 root   admin  - 1224 Aug 13 14:00 ..
+-rw-r--r--   1 root   wheel  -    0 Jul  1  2009 .localized
+drwxrwxrwt   4 root   wheel  -  136 Dec  4  2011 Shared
+drwxrwxrwx   6 root   admin  -  204 Jul 25 10:35 WorkSpace
+drwxr-xr-x   3 root   admin  -  102 Jul 10 23:24 down
+drwxr-xr-x+ 26 macos  staff  -  884 May 16 16:42 mac
+
+
+
+2>>>> ls	21:24	2012年8月23日;
+
+ls
+total 0
+drwxr-xr-x   7 root   admin  -  238 May 24 10:15 .
+drwxrwxr-t  34 root   admin  - 1224 Aug 13 14:00 ..
+-rw-r--r--   1 root   wheel  -    0 Jul  1  2009 .localized
+drwxrwxrwt   4 root   wheel  -  136 Dec  4  2011 Shared
+drwxrwxrwx   6 root   admin  -  204 Jul 25 10:35 WorkSpace
+drwxr-xr-x   3 root   admin  -  102 Jul 10 23:24 down
+drwxr-xr-x+ 26 macos  staff  -  884 May 16 16:42 mac
+
+
+ls
+total 0
+drwxr-xr-x   7 root   admin  -  238 May 24 10:15 .
+drwxrwxr-t  34 root   admin  - 1224 Aug 13 14:00 ..
+-rw-r--r--   1 root   wheel  -    0 Jul  1  2009 .localized
+drwxrwxrwt   4 root   wheel  -  136 Dec  4  2011 Shared
+drwxrwxrwx   6 root   admin  -  204 Jul 25 10:35 WorkSpace
+drwxr-xr-x   3 root   admin  -  102 Jul 10 23:24 down
+drwxr-xr-x+ 26 macos  staff  -  884 May 16 16:42 mac
+
+
+ls
+nulltotal 0
+drwxr-xr-x   7 root   admin  -  238 May 24 10:15 .
+drwxrwxr-t  34 root   admin  - 1224 Aug 13 14:00 ..
+-rw-r--r--   1 root   wheel  -    0 Jul  1  2009 .localized
+drwxrwxrwt   4 root   wheel  -  136 Dec  4  2011 Shared
+drwxrwxrwx   6 root   admin  -  204 Jul 25 10:35 WorkSpace
+drwxr-xr-x   3 root   admin  -  102 Jul 10 23:24 down
+drwxr-xr-x+ 26 macos  staff  -  884 May 16 16:42 mac
+
+
+ls
+total 0
+drwxr-xr-x   7 root   admin  -  238 May 24 10:15 .
+drwxrwxr-t  34 root   admin  - 1224 Aug 13 14:00 ..
+-rw-r--r--   1 root   wheel  -    0 Jul  1  2009 .localized
+drwxrwxrwt   4 root   wheel  -  136 Dec  4  2011 Shared
+drwxrwxrwx   6 root   admin  -  204 Jul 25 10:35 WorkSpace
+drwxr-xr-x   3 root   admin  -  102 Jul 10 23:24 down
+drwxr-xr-x+ 26 macos  staff  -  884 May 16 16:42 mac
+
+
+null
+total 0
+drwxr-xr-x   7 root   admin  -  238 May 24 10:15 .
+drwxrwxr-t  34 root   admin  - 1224 Aug 13 14:00 ..
+-rw-r--r--   1 root   wheel  -    0 Jul  1  2009 .localized
+drwxrwxrwt   4 root   wheel  -  136 Dec  4  2011 Shared
+drwxrwxrwx   6 root   admin  -  204 Jul 25 10:35 WorkSpace
+drwxr-xr-x   3 root   admin  -  102 Jul 10 23:24 down
+drwxr-xr-x+ 26 macos  staff  -  884 May 16 16:42 mac
+
+
+ls -al /User
+total 0
+drwxr-xr-x   7 root   admin  -  238 May 24 10:15 .
+drwxrwxr-t  34 root   admin  - 1224 Aug 13 14:00 ..
+-rw-r--r--   1 root   wheel  -    0 Jul  1  2009 .localized
+drwxrwxrwt   4 root   wheel  -  136 Dec  4  2011 Shared
+drwxrwxrwx   6 root   admin  -  204 Jul 25 10:35 WorkSpace
+drwxr-xr-x   3 root   admin  -  102 Jul 10 23:24 down
+drwxr-xr-x+ 26 macos  staff  -  884 May 16 16:42 mac
+
+

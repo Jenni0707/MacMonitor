@@ -1,0 +1,387 @@
+﻿package com.topking.ftp.util;
+
+import java.io.IOException;
+import sun.net.TelnetInputStream;
+import sun.net.ftp.FtpClient;
+
+import com.QQPanel.ICQPOP;
+import com.topking.ftp.bean.UserInfoBean;
+
+public class FileupdataUtil extends Thread {// implements Runnable{
+	private ICQPOP icqPop;
+	UserInfoBean uib;
+	private String Path;
+	private FtpClient ftp;
+
+	public FileupdataUtil(ICQPOP icqpop, UserInfoBean uibean) {
+		this.icqPop = icqpop;
+		this.uib = uibean;
+	}
+
+	public void run() {
+		Path = "/";
+		System.out.println("FileupdataUtil.run");
+		readname();
+	}
+
+	// 读取用户名
+	private void readname() {
+		int num = icqPop.infomap.size();
+		String userInfo;
+		
+		ftp = getFtp(uib.getFtpUrl(), uib.getFtpName(), uib.getFtpPasswd());
+		System.out.println("Path+str[]: " + Path + uib.getUserID() + "/");
+		if (ftp == null) { // FTP不可达
+			String fileName[] = uib.getUserIcon().split("/");
+			String fileRes[] = fileName[fileName.length - 1].split("\\.");
+			if (fileRes[0].indexOf("-") == -1) {
+				fileRes[0] += "-2";
+			} else {
+				String file[] = fileRes[0].split("-");
+				fileRes[0] = file[0] + "-2";
+			}
+			System.out.println("用户头像：" + fileRes[0]);
+			fileName[fileName.length - 1] = fileRes[0] + "." + fileRes[1];
+
+			String Result = "";
+			for (int k = 0; k < fileName.length; ++k) {
+				if (k != 0) {
+					Result += "/";
+					Result += fileName[k];
+				} else
+					Result += fileName[k];
+			}
+			userInfo = uib.getUserName() + "," + uib.getUserID() + ","
+					+ uib.getFtpUrl() + "," + uib.getFtpName() + ","
+					+ uib.getFtpPasswd() + "," + Result;
+			System.out.println("FTP不可达userInfo:" + userInfo);
+			int temp = 0;
+			for (int i = 0; i < num; i++) {
+				if (icqPop.infomap.get(i).contains(uib.getUserID()))
+					break;
+				temp++;
+			}
+			icqPop.infomap.remove(temp);
+			icqPop.infomap.put(temp, userInfo);
+			return;
+		}
+
+		int LoadResult = loadFile(Path + uib.getUserID() + "/");
+		if (LoadResult == 1) { // 在线
+			String fileName[] = uib.getUserIcon().split("/");
+			String fileRes[] = fileName[fileName.length - 1].split("\\.");
+			if (fileRes[0].indexOf("-") == -1) {
+				fileRes[0] += "-1";
+			} else {
+				String file[] = fileRes[0].split("-");
+				fileRes[0] = file[0] + "-1";
+			}
+			System.out.println("用户头像：" + fileRes[0]);
+			fileName[fileName.length - 1] = fileRes[0] + "." + fileRes[1];
+
+			String Result = "";
+			for (int k = 0; k < fileName.length; ++k) {
+				if (k != 0) {
+					Result += "/";
+					Result += fileName[k];
+				} else
+					Result += fileName[k];
+			}
+			userInfo = uib.getUserName() + "," + uib.getUserID() + ","
+					+ uib.getFtpUrl() + "," + uib.getFtpName() + ","
+					+ uib.getFtpPasswd() + "," + Result;
+			System.out.println("在线userInfo:" + userInfo);
+			int temp = 0;
+			for (int i = 0; i < num; i++) {
+				if (icqPop.infomap.get(i).contains(uib.getUserID()))
+					break;
+				temp++;
+			}
+			icqPop.infomap.remove(temp);
+			icqPop.infomap.put(temp, userInfo);
+		} else if (LoadResult == -2) { // 离线，有文件
+			String fileName[] = uib.getUserIcon().split("/");
+			String fileRes[] = fileName[fileName.length - 1].split("\\.");
+			if (fileRes[0].indexOf("-") == -1) {
+				fileRes[0] += "-3";
+			} else {
+				String file[] = fileRes[0].split("-");
+				fileRes[0] = file[0] + "-3";
+			}
+			System.out.println("用户头像：" + fileRes[0]);
+			fileName[fileName.length - 1] = fileRes[0] + "." + fileRes[1];
+
+			String Result = "";
+			for (int k = 0; k < fileName.length; ++k) {
+				if (k != 0) {
+					Result += "/";
+					Result += fileName[k];
+				} else
+					Result += fileName[k];
+			}
+			userInfo = uib.getUserName() + "," + uib.getUserID() + ","
+					+ uib.getFtpUrl() + "," + uib.getFtpName() + ","
+					+ uib.getFtpPasswd() + "," + Result;
+			System.out.println("离线，有文件userInfo:" + userInfo);
+			int temp = 0;
+			for (int i = 0; i < num; i++) {
+				if (icqPop.infomap.get(i).contains(uib.getUserID()))
+					break;
+				temp++;
+			}
+			icqPop.infomap.remove(temp);
+			icqPop.infomap.put(temp, userInfo);
+		} else if (LoadResult == 0) { // 离线，没文件
+			String fileName[] = uib.getUserIcon().split("/");
+			String fileRes[] = fileName[fileName.length - 1].split("\\.");
+			fileName[fileName.length - 1] = fileRes[0].substring(0, 1) + "."
+					+ fileRes[1];
+			String Result = "";
+			System.out.println("用户头像：" + fileRes[0]);
+			for (int k = 0; k < fileName.length; ++k) {
+				if (k != 0) {
+					Result += "/";
+					Result += fileName[k];
+				} else
+					Result += fileName[k];
+			}
+			userInfo = uib.getUserName() + "," + uib.getUserID() + ","
+					+ uib.getFtpUrl() + "," + uib.getFtpName() + ","
+					+ uib.getFtpPasswd() + "," + Result;
+			System.out.println("离线，没文件userInfo:" + userInfo);
+			int temp = 0;
+			for (int i = 0; i < num; i++) {
+				if (icqPop.infomap.get(i).contains(uib.getUserID()))
+					break;
+				temp++;
+			}
+			icqPop.infomap.remove(temp);
+			icqPop.infomap.put(temp, userInfo);
+		} else if (LoadResult == -3) {// 软件已被卸载
+			String fileName[] = uib.getUserIcon().split("/");
+			String fileRes[] = fileName[fileName.length - 1].split("\\.");
+			if (fileRes[0].indexOf("-") == -1) {
+				fileRes[0] += "-4";
+			} else {
+				String file[] = fileRes[0].split("-");
+				fileRes[0] = file[0] + "-4";
+			}
+			System.out.println("用户头像：" + fileRes[0]);
+			fileName[fileName.length - 1] = fileRes[0] + "." + fileRes[1];
+
+			String Result = "";
+			for (int k = 0; k < fileName.length; ++k) {
+				if (k != 0) {
+					Result += "/";
+					Result += fileName[k];
+				} else
+					Result += fileName[k];
+			}
+			userInfo = uib.getUserName() + "," + uib.getUserID() + ","
+					+ uib.getFtpUrl() + "," + uib.getFtpName() + ","
+					+ uib.getFtpPasswd() + "," + Result;
+			System.out.println("软件已被卸载userInfo:" + userInfo);
+			int temp = 0;
+			for (int i = 0; i < num; i++) {
+				if (icqPop.infomap.get(i).contains(uib.getUserID()))
+					break;
+				temp++;
+			}
+			icqPop.infomap.remove(temp);
+			icqPop.infomap.put(temp, userInfo);
+		}
+		/*
+		 * if (LoadResult == -1) { // FTP上相应用户文件夹被删除 int result =
+		 * JOptionPane.showConfirmDialog(null, "是否删除在FTP不存在对应文件夹的用户" +
+		 * uib.getUserID() + ":", "警告", JOptionPane.YES_OPTION); if (result ==
+		 * 0) { int temp = 0; for (int i = 0; i < num; i++) { if
+		 * (icqPop.infomap.get(i).contains(uib.getUserID())) break; temp++; }
+		 * icqPop.dlm.remove(temp); icqPop.infomap.remove(temp); if (temp != num
+		 * - 1) { for (int j = temp; j < num; j++) { icqPop.infomap.put(j,
+		 * icqPop.infomap.get(j + 1)); } icqPop.infomap.remove(num - 1); }
+		 * num--; } }
+		 */
+	}
+
+	// 刷新指定文件夹
+	private String listFile(String path, FtpClient ftp) {
+		String list = null;
+		try {
+			ftp.cd(path);
+			System.out.println("FileupdataUtil.listFile");
+			TelnetInputStream is = ftp.list();
+			int c;
+			StringBuffer sb = new StringBuffer();
+			while ((c = is.read()) != -1) {
+				sb.append((char) c);
+			}
+			String list2 = new String(sb);
+			list = new String(list2.getBytes("ISO-8859-1"), "gbk");
+			System.out.println("FileupdataUtil.listFile\n" + list);
+		} catch (IOException e) {
+			return "-1";
+		}
+		return list;
+	}
+
+	// 获取指定文件
+	private String GetFile(String path, FtpClient ftp) {
+		String list = null;
+		try {
+			TelnetInputStream is = ftp.get("active.result");
+			int c;
+			StringBuffer sb = new StringBuffer();
+			while ((c = is.read()) != -1) {
+				sb.append((char) c);
+			}
+			String list2 = new String(sb);
+			list = new String(list2.getBytes("ISO-8859-1"), "gbk");
+		} catch (IOException e) {
+			return "-1";
+		}
+		System.out.println("active.result=" + list);
+		return list;
+	}
+
+	// 导入目标文件夹获得文件的创建时间并比较
+	private int loadFile(String path) {
+		int Month = 0;
+		int Day = 0;
+		int Hour = 0;
+		int Minute = 0;
+		int month = 0;
+		int day = 0;
+		int minute = 0;
+		int hour = 0;
+		String time = icqPop.timemap.get(uib.getUserID());
+		String timekeep[] = time.split("-");
+		String timestate[] = timekeep[3].split(",");
+		Month = Integer.parseInt(timekeep[0]);
+		Day = Integer.parseInt(timekeep[1]);
+		Hour = Integer.parseInt(timekeep[2]);
+		Minute = Integer.parseInt(timestate[0]);
+		int state = Integer.parseInt(timestate[1]);
+		String listfile = listFile(path, ftp);
+		if (listfile.equals("-1")) {
+			listfile = listFile(path, ftp);
+		}
+		Boolean check = isExsitFile(listfile);
+		String getfile;
+		if (listfile.contains("active.result")) {
+			getfile = GetFile(path, ftp);
+			if (getfile.equals("-1")) {
+				getfile = GetFile(path, ftp);
+			}
+			if (getfile.contains("deleted")) {
+				return -3;
+			}
+			String[] s = getfile.split("-");
+			month = Integer.parseInt(s[1]);
+			day = Integer.parseInt(s[2]);
+			hour = Integer.parseInt(s[3]);
+			minute = Integer.parseInt(s[4]);
+			if (Month == 0) {
+				String temp = month + "-" + day + "-" + hour + "-" + minute;
+				icqPop.timemap.put(uib.getUserID(), temp + ",0");
+				if (check) {
+					return -2;
+				} else
+					return 0;
+			}
+			if (state == 1) {
+				if (month == Month && day == Day && hour == Hour
+						&& minute == Minute) {
+					int temp = icqPop.nummap.get(uib.getUserID()) + 1;
+					if (temp >= 3) {
+						if (check) {
+							return -2;
+						} else
+							return 0;
+					}
+					icqPop.nummap.put(uib.getUserID(), temp);
+				}
+				if (month == Month && day == Day && hour == Hour
+						&& (Minute - minute <= 5)) {
+					System.out.println(s[s.length - 1] + " is true");
+					String temp = month + "-" + day + "-" + hour + "-" + minute
+							+ ",1";
+					System.out.println("--------" + temp);
+					icqPop.timemap.put(uib.getUserID(), temp);
+					return 1;
+				}
+			} else {
+				if (month == Month && day == Day && hour == Hour
+						&& minute == Minute) {
+					if (check) {
+						return -2;
+					} else
+						return 0;
+				} else if (month == Month && day == Day && hour == Hour
+						&& (Minute - minute <= 5)) {
+					System.out.println(s[s.length - 1] + " is true");
+					String temp = month + "-" + day + "-" + hour + "-" + minute
+							+ ",1";
+					System.out.println("--------" + temp);
+					icqPop.timemap.put(uib.getUserID(), temp);
+					icqPop.nummap.put(uib.getUserID(), 0);
+					return 1;
+				}
+			}
+		}
+		if (check) {
+			return -2;
+		} else
+			return 0;
+	}
+
+	// 判断是否有离线文件
+	public boolean isExsitFile(String file) {
+		if (file.equals("")) {
+			return false;
+		}
+		String[] info = file.split("\n");
+		for (int i = 0; i < info.length; i++) {
+			if (info[i].length() > 8) {
+				info[i] = info[i].replaceAll(" ", "/");
+				while (info[i].contains("//")) {
+					info[i] = info[i].replaceAll("//", "/");
+				}
+				String[] s = info[i].split("/");
+				String fname = s[s.length - 1].trim();
+				if (!fname.startsWith(".") && !fname.startsWith("..")
+						&& !fname.contains("active.result")
+						&& !fname.contains("config")) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
+	// 判断远程文件夹是否存在
+	public boolean isExsitDir(String dir, FtpClient ftpClient) {
+		try {
+			ftpClient.cd(dir);
+		} catch (IOException e) {
+			System.err.println("文件夹不存在.......................");
+			return false;
+		}
+		return true;
+	}
+
+	private FtpClient getFtp(String host, String name, String pass) {
+		try {
+			FtpClient fc = new FtpClient();
+			fc.setConnectTimeout(500);
+			fc.openServer(host);
+			fc.login(name, pass);
+			return fc;
+		} catch (IOException e) {
+			System.out.println("连接主机:" + host + "失败!");
+		} catch (SecurityException e1) {
+			System.out.println("无权限与主机连接！");
+		}
+		System.out.println("FTP链接错误！");
+		return null;
+	}
+}

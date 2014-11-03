@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/project/!svn/ver/524/%E7%AE%A1%E7%90%86%E5%BA%93/MacProject/QQ-v2.0/src/com/topking/ftp/util
+END
+UpLoadToRemote.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/project/!svn/ver/509/%E7%AE%A1%E7%90%86%E5%BA%93/MacProject/QQ-v2.0/src/com/topking/ftp/util/UpLoadToRemote.java
+END
+DownLoadFromRemote.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/project/!svn/ver/524/%E7%AE%A1%E7%90%86%E5%BA%93/MacProject/QQ-v2.0/src/com/topking/ftp/util/DownLoadFromRemote.java
+END
+GetFTP.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/project/!svn/ver/509/%E7%AE%A1%E7%90%86%E5%BA%93/MacProject/QQ-v2.0/src/com/topking/ftp/util/GetFTP.java
+END
+PathUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/project/!svn/ver/509/%E7%AE%A1%E7%90%86%E5%BA%93/MacProject/QQ-v2.0/src/com/topking/ftp/util/PathUtil.java
+END
+FileupdataUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/project/!svn/ver/524/%E7%AE%A1%E7%90%86%E5%BA%93/MacProject/QQ-v2.0/src/com/topking/ftp/util/FileupdataUtil.java
+END

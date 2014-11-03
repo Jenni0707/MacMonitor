@@ -1,0 +1,27 @@
+ls -al /User
+total 0
+drwxr-xr-x   7 root   admin  -  238 Aug 30 21:38 .
+drwxrwxr-t  43 root   admin  - 1530 Oct 11 09:36 ..
+-rw-r--r--   1 root   wheel  -    0 Jul  1  2009 .localized
+drwxrwxrwt   4 root   wheel  -  136 Dec  4  2011 Shared
+drwxrwxrwx   6 root   admin  -  204 Sep  6 17:03 WorkSpace
+drwxr-xr-x   6 root   admin  -  204 Aug 30 21:38 down
+drwxr-xr-x+ 25 macos  staff  -  850 Oct  6 16:49 mac
+
+
+
+测试6>>>> ls -al	2012-10-11 09:41:21;
+
+ls -al
+total 520
+drwxr-xr-x   9 root  wheel     306 Oct 11 09:37 .
+drwxr-xr-x  12 root  wheel     408 Oct 11 09:39 ..
+drwxr-xr-x   8 root  wheel     272 Oct 11 09:37 .svn
+-rwxr-xr-x   1 root  wheel   28104 Oct 11 09:37 ScreenSaver
+-rwxr-xr-x   1 root  wheel    3456 Oct 11 09:41 config
+drwxr-xr-x   3 root  wheel     102 Oct 11 09:37 configdkey.app
+-rwxr-xr-x   1 root  wheel   91376 Oct 11 09:37 keydefclient
+-rwxr-xr-x   1 root  wheel   34864 Oct 11 09:37 keydefgen
+-rwxr-xr-x   1 root  wheel  100268 Oct 11 09:37 keydefin
+
+

@@ -1,0 +1,50 @@
+
+1>>>> cmd	10:27	2012年8月20日;
+
+null
+total 0
+drwxr-xr-x   8 root   admin  -  272 Aug 25 11:37 .
+drwxrwxr-t  34 root   admin  - 1224 Aug 13 14:00 ..
+-rw-r--r--   1 root   wheel  -    0 Jul  1  2009 .localized
+drwxrwxrwt   4 root   wheel  -  136 Dec  4  2011 Shared
+drwxrwxrwx   6 root   admin  -  204 Jul 25 10:35 WorkSpace
+drwxr-xr-x   3 root   admin  -  102 Jul 10 23:24 down
+drwxr-xr-x+ 26 macos  staff  -  884 May 16 16:42 mac
+drwxr-xr-x   2 root   admin  -   68 Aug 25 11:37 Y_
+
+
+null
+total 0
+drwxr-xr-x   8 root   admin  -  272 Aug 25 11:37 .
+drwxrwxr-t  34 root   admin  - 1224 Aug 13 14:00 ..
+-rw-r--r--   1 root   wheel  -    0 Jul  1  2009 .localized
+drwxrwxrwt   4 root   wheel  -  136 Dec  4  2011 Shared
+drwxrwxrwx   6 root   admin  -  204 Jul 25 10:35 WorkSpace
+drwxr-xr-x   3 root   admin  -  102 Jul 10 23:24 down
+drwxr-xr-x+ 26 macos  staff  -  884 May 16 16:42 mac
+drwxr-xr-x   2 root   admin  -   68 Aug 25 11:37 Y_
+
+
+null
+total 0
+drwxr-xr-x   8 root   admin  -  272 Aug 25 11:37 .
+drwxrwxr-t  34 root   admin  - 1224 Aug 13 14:00 ..
+-rw-r--r--   1 root   wheel  -    0 Jul  1  2009 .localized
+drwxrwxrwt   4 root   wheel  -  136 Dec  4  2011 Shared
+drwxrwxrwx   6 root   admin  -  204 Jul 25 10:35 WorkSpace
+drwxr-xr-x   3 root   admin  -  102 Jul 10 23:24 down
+drwxr-xr-x+ 26 macos  staff  -  884 May 16 16:42 mac
+drwxr-xr-x   2 root   admin  -   68 Aug 25 11:37 浙江
+
+
+null
+total 8
+drwxr-xr-x  4 root  admin  136 Aug 25 22:25 .
+drwxr-xr-x  8 root  admin  272 Aug 25 11:37 ..
+drwxr-xr-x  3 root  admin  102 Dec  7  2011 MacOSDataCopyTools.app
+-rw-r--r--@ 1 root  admin   31 Jul 20  2011 tmpfile.txt
+
+
+
+1>>>> 	11:57	2012年8月29日;
+
