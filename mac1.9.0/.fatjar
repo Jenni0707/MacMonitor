@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Sun Jan 16 10:37:25 CST 2011
+onejar.license.required=true
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=Mac OS Data Copy Tool.jar
+manifest.mergeall=true
+manifest.mainclass=mac.project.MainUI
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=
+includes=
